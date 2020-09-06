@@ -4,6 +4,8 @@ import cors from 'cors';
 
 import { db } from './models/index.js';
 
+import { gradeRouter } from './routes/gradeRouter.js';
+
 (async () => {
   try {
     await db.mongoose.connect(db.url, {
@@ -26,6 +28,7 @@ app.use(
   })
 );
 
+app.use(gradeRouter);
 app.get('/', (req, res) => {
   res.send('API em execucao');
 });
