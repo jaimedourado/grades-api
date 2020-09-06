@@ -1,5 +1,5 @@
 export default (mongoose) => {
-  const gradeSchema = mongoose.schema({
+  const gradeSchema = mongoose.Schema({
     name: {
       type: String,
       require: true,
