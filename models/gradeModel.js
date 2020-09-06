@@ -30,7 +30,7 @@ export default (mongoose) => {
     return object;
   });
 
-  const gradeModel = mongoose.Model('grades', gradeSchema, 'grades');
+  const gradeModel = mongoose.model('grades', gradeSchema, 'grades');
 
   return gradeModel;
 };
